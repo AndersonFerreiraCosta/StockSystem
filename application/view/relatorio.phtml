@@ -1,0 +1,46 @@
+<?php
+/* Tratando erros qualquer duvida consulte link http://www.rafaelbiriba.com/2009/02/27/php-ocultando-erros-de-codigo.html*/
+error_reporting(0);
+ini_set(“display_errors”, 0 );
+?>
+<?php 
+$acao=$_GET['acao'];
+$datainicial= $_POST['datainicial'];
+$datafinal= $_POST['datafinal'];
+
+switch ($acao){
+	case 'produto':
+	$relatorio=new Relatorio("produto");
+	$relatorio->Visualizar();
+	break;
+	
+	case 'fornecedor':
+	$relatorio=new Relatorio("fornecedor");
+	$relatorio->Visualizar();
+	break;
+	
+	case 'retirante':
+	$relatorio=new Relatorio("retirante");
+	$relatorio->Visualizar();
+	break;
+	
+	case 'entrada':
+	$relatorio=new Relatorio("entrada");
+	$relatorio->Entrada($datainicial,$datafinal);
+	break;
+	
+	case 'saida':
+	$relatorio=new Relatorio("saida");
+	$relatorio->Saida($datainicial,$datafinal);
+	break;
+	
+	
+	
+	
+	
+	
+	
+}
+
+
+?>

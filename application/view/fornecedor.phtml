@@ -1,0 +1,38 @@
+<?php 
+$acao=(isset($_GET['acao']))?$_GET['acao']:"";
+$id=(isset($_GET['id']))?$_GET['id']:"0";
+
+switch ($acao){
+	case 'formcadastro':
+	$form=new Form("fornecedor");
+	$form->FormCadastro('','cadastrar');	
+	break;
+	
+	case 'cadastrar':
+	$fornecedores=new Fornecedores("");
+	$fornecedores->Cadastrar();
+	break;
+	
+	case 'listar':
+	$fornecedores=new Fornecedores();
+	$fornecedores->Listar();
+	break;
+	
+	case 'deletar':
+	$fornecedores=new Fornecedores();
+	$fornecedores->Deletar($id);
+	break;
+	
+	case 'formeditar':
+	$form=new Form("fornecedor");
+	$form->FormEditar("editar",$id);
+	break;
+	
+	case 'editar':
+	$fornecedores=new Fornecedores();
+	$fornecedores->Atualizar($id);
+	
+}
+
+
+?>

@@ -1,0 +1,25 @@
+<?php 
+$acao=(isset($_GET['acao']))?$_GET['acao']:"";
+$id=(isset($_GET['id']))?$_GET['id']:"0";
+switch ($acao){
+	case 'formcadastroentrada':
+		$form=new Form("entrada");
+		$form->FormCadastro('produto','entrada',',produto,fornecedor,categoria',
+		array('remetentecategoria'=>'categoria','destinatariocategoria'=>'produto','tabelacategoria'=>'produto'
+		));
+	
+	//,'remetenteproduto'=>'produto','destinatarioproduto'=>'fornecedor','tabelaproduto'=>'fornecedor')); 
+	break;
+	
+	case 'formcadastrosaida':
+		$form=new Form("saida");
+		$form->FormCadastro('produto','saida',',produto,retirante,categoria',
+		array('remetentecategoria'=>'categoria','destinatariocategoria'=>'produto','tabelacategoria'=>'produto'
+		));	
+	break;
+	
+	
+}
+
+
+?>

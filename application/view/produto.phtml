@@ -1,0 +1,69 @@
+<?php 
+
+$acao=(isset($_GET['acao']))?$_GET['acao']:"";
+$id=(isset($_GET['id']))?$_GET['id']:"0";
+
+$quantidade=(isset($_POST['quantidade']))?$_POST['quantidade']:"0";
+$idproduto= (isset($_POST['produto']))?$_POST['produto']:"0";
+
+
+//$acao=$_GET['acao'];
+//$id=$_GET['id'];
+//$quantidade=$_POST['quantidade'];
+//$idproduto=$_POST['produto'];
+
+switch ($acao){
+	case 'formcadastro':
+	$form=new Form("produto");
+	$form->FormCadastro('','cadastrar','categoria');	
+	break;
+	
+	case 'formcadastrocategoria':
+	$form=new Form("categoria");
+	$form->FormCadastro('','produto','cadastrarcategoria');	
+	break;
+	
+	case 'cadastrar':
+	$produtos=new Produtos("produto");
+	$produtos->Cadastrar();
+	break;
+	
+	
+	case 'cadastrarcategoria':
+	$produtos=new Produtos("categoria");
+	$produtos->Cadastrar();
+	break;
+	
+	case 'listar':
+	$produtos=new Produtos();
+	$produtos->Listar();
+	break;
+	
+	case 'deletar':
+	$produtos=new Produtos();
+	$produtos->Deletar($id);
+	break;
+	
+	case 'formeditar':
+	$form=new Form("produto");
+	$form->FormEditar("editar",$id,"categoria,''");
+	break;
+	
+	case 'editar':
+	$produtos=new Produtos();
+	$produtos->Atualizar($id);
+	break;
+	
+	case 'entrada':
+	$produtos=new Produtos();
+	$produtos->Entrada($idproduto,$quantidade);
+	break;
+		
+	case 'saida':
+	$produtos=new Produtos('produto',$idproduto);
+	$produtos->Saida($idproduto,$quantidade);
+	break;
+}
+
+
+?>
