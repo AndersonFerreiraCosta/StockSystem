@@ -76,9 +76,13 @@ include 'application/controler/DB.php';
 <body>
 
 	<div id="Full">
+
+	<nav class="navbar navbar-default navbar-static-top">
+		
 		<div class="container">
 
-			<nav class="navbar navbar-default">
+			
+			
 				<div class="container-fluid">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle collapsed"
@@ -173,16 +177,10 @@ include 'application/controler/DB.php';
 						</ul>
 					</div>
 				</div>
-
+             </div>
 			</nav>
-		</div>
-
-
-
-
-
-
-		<p>&nbsp;</p>
+	
+<p>&nbsp;</p>
 
 
 		<div id="Content"><?php include 'application/view/'.$url.'.phtml'; ?></div>
