@@ -104,11 +104,10 @@ include 'application/controler/DB.php';
 								data-toggle="dropdown" role="button" aria-haspopup="true"
 								aria-expanded="false"> Produtos <span class="caret"></span></a>
 								<ul class="dropdown-menu">
-									<li><a href="main.php?url=produto&acao=formcadastro">Cadastrar
-											Produtos</a></li>
+									<li><a href="main.php?url=categoria&acao=formcadastrocategoria">Cadastrar Categoria</a></li>
+									<li><a href="main.php?url=produto&acao=formcadastro">Cadastrar Produtos</a></li>
 									<li><a href="main.php?url=produto&acao=listar">Listar Produtos</a></li>
-									<li><a href="main.php?url=categoria&acao=listar">Listar
-											Categorias</a></li>
+									<li><a href="main.php?url=categoria&acao=listar">Listar Categorias</a></li>
 
 								</ul></li>
 

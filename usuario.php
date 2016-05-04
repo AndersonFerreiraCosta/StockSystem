@@ -75,9 +75,13 @@ include 'application/controler/DB.php';
 <body>
 
 	<div id="Full">
+
+	<nav class="navbar navbar-default navbar-static-top">
+		
 		<div class="container">
 
-			<nav class="navbar navbar-default">
+			
+			
 				<div class="container-fluid">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle collapsed"
@@ -169,12 +173,11 @@ include 'application/controler/DB.php';
 
 
 							<li><a href="logout.php">logout</a></li>
-						</ul>
+							</ul>
 					</div>
 				</div>
-
+             </div>
 			</nav>
-		</div>
 		
 			<br>
 	<br>
@@ -191,6 +194,7 @@ include 'application/controler/DB.php';
 	<input type="password" name="npass"> <br> <br>
 	<input type="submit" value="Cadastrar">
 	</center>
+	</div>
 
 </body>
 </html>
