@@ -59,26 +59,16 @@ include 'application/controler/DB.php';
 
 <title>StockSystem</title>
 <style type="text/css">
+
 @import url("styles/index.css");
 
 @import url("styles/menu.css");
 
-#apDiv1 {
-	position: absolute;
-	width: 145px;
-	height: 115px;
-	z-index: 1;
-	left: 1108px;
-	top: 35px;
-	visibility: inherit;
-}
+
 </style>
-<script type="text/javascript" src="application/js/jquery.min.js"></script>
-<script type="text/javascript" src="application/js/menu.js"></script>
-<script type="text/javascript" src="application/js/functions.js"></script>
+
 <script src="http://code.jquery.com/jquery-latest.js"></script>
-<script
-	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
 </head>
 
@@ -104,7 +94,7 @@ include 'application/controler/DB.php';
 
 						<ul class="nav navbar-nav">
 
-							<li class="active"><a href="main.php">Home</a></li>
+							<li class=""><a href="main.php">Home</a></li>
 
 							<li class="dropdown"><a href="#" class="dropdown-toggle"
 								data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -115,8 +105,6 @@ include 'application/controler/DB.php';
 									<li><a href="main.php?url=produto&acao=listar">Listar Produtos</a></li>
 									<li><a href="main.php?url=categoria&acao=listar">Listar
 											Categorias</a></li>
-
-
 
 								</ul></li>
 
@@ -179,16 +167,18 @@ include 'application/controler/DB.php';
 
 
 								</ul></li>
-								
+
 
 							<li><a href="logout.php">logout</a></li>
 						</ul>
-			
-			</nav>
+					</div>
+				</div>
 
+			</nav>
 		</div>
 
-								
+
+
 
 
 
