@@ -1,9 +1,6 @@
 <?php
-if (Isset ( $_COOKIE ["logado"] )) {
-} else {
-	echo '<meta http-equiv="refresh" content="0;url=/">';
-	exit ();
-}
+
+include("validador.php");
 
 if (isset ( $_GET ['url'] )) {
 	$url = $_GET ['url'];
@@ -166,7 +163,7 @@ include 'application/controler/DB.php';
 								data-toggle="dropdown" role="button" aria-haspopup="true"
 								aria-expanded="false"> Usuarios <span class="caret"></span></a>
 								<ul class="dropdown-menu">
-									<li><a href="usuario.php">Cadastrar</a></li>
+									<li><a href="cadastrar.html">Cadastrar</a></li>
 
 
 								</ul></li>

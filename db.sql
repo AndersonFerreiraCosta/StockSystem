@@ -1,13 +1,13 @@
-CREATE DATABASE `stocksystem` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE IF NOT EXISTS `stocksystem` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
-CREATE TABLE  `stocksystem`.`srs_category` (
+CREATE TABLE IF NOT EXISTS `stocksystem`.`srs_category` (
   `id` int(10) unsigned NOT NULL auto_increment,
   `nome` varchar(45) default NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 
-CREATE TABLE  `stocksystem`.`srs_input` (
+CREATE TABLE IF NOT EXISTS `stocksystem`.`srs_input` (
   `id` int(10) unsigned NOT NULL auto_increment,
   `data` datetime NOT NULL,
   `categoria` varchar(45) NOT NULL,
@@ -18,7 +18,7 @@ CREATE TABLE  `stocksystem`.`srs_input` (
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
-CREATE TABLE  `stocksystem`.`srs_supplier` (
+CREATE TABLE IF NOT EXISTS `stocksystem`.`srs_supplier` (
   `id` int(10) unsigned NOT NULL auto_increment,
   `nome` text NOT NULL,
   `telefone` text,
@@ -28,7 +28,7 @@ CREATE TABLE  `stocksystem`.`srs_supplier` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 
-CREATE TABLE  `stocksystem`.`srs_product` (
+CREATE TABLE IF NOT EXISTS `stocksystem`.`srs_product` (
   `id` int(10) unsigned NOT NULL auto_increment,
   `categoria` text,
   `nome` text NOT NULL,
@@ -37,14 +37,14 @@ CREATE TABLE  `stocksystem`.`srs_product` (
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
-CREATE TABLE  `stocksystem`.`srs_requester` (
+CREATE TABLE IF NOT EXISTS `stocksystem`.`srs_requester` (
   `id` int(10) unsigned NOT NULL auto_increment,
   `nome` text NOT NULL,
   `empresa` text NOT NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
-CREATE TABLE  `stocksystem`.`srs_output` (
+CREATE TABLE IF NOT EXISTS `stocksystem`.`srs_output` (
   `id` int(10) unsigned NOT NULL auto_increment,
   `data` datetime NOT NULL,
   `categoria` varchar(45) NOT NULL,
@@ -54,3 +54,11 @@ CREATE TABLE  `stocksystem`.`srs_output` (
   `obs` text NOT NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+
+CREATE TABLE IF NOT EXISTS `stocksystem`.`usuarios` (
+  `cod_usuario` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(45) NOT NULL,
+  `login` VARCHAR(45) NOT NULL,
+  `senha` VARCHAR(32) NOT NULL,
+  PRIMARY KEY (`cod_usuario`))
+ENGINE = InnoDB

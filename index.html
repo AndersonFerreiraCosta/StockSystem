@@ -1,44 +1,57 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="assets/img/logo.png">
 
-<title>Acesso</title>
+<!-- Bootstrap core CSS -->
+<link href="assets/css/bootstrap.css" rel="stylesheet">
 
-<link rel="stylesheet" href="css/style.css" media="screen"
-	type="text/css" />
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<link href="assets/css/ie10-viewport-bug-workaround.css"
+	rel="stylesheet">
 
+<!-- Custom styles for this template -->
+<link href="assets/css/justified-nav.css" rel="stylesheet">
+
+<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<script src="assets/js/ie-emulation-modes-warning.js"></script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<title>Login no Sistema</title>
 </head>
-
 <body>
-<body class="profile-login">
-	<header class="global-header">
-		<div>
-			<nav class="global-nav">
-				
-			</nav>
-		</div>
-	</header>
-	<section class="login">
-		<form id="login-form" accept-charset="utf-8" method="post"
-			action="login.php">
-			
-			<h1>Controle de Estoque</h1>
-			Usuário<input type="text" name="user" aria-required="true" required
-				class="required">
-			<div class="password-container">
-				Senha<input name="pass" type="password" required class="required"
-					aria-required="true">
 
-			</div>
-			<button class="button submit" data-analytics="sign-in" type="submit">Login</button>
+<div class="container">
 
+      <form action="login.php" method="Post" class="form-signin">
+        <h2 class="form-signin-heading" align="center">Bem-Vindo</h2>
+        <label for="inputLogin" class="sr-only">Login</label>
+        <input type="text" name="usuario" class="form-control" placeholder="Digite seu login" required="" autofocus="">
+        <label for="inputPassword" class="sr-only">Senha</label>
+        <input type="password" name="senha" class="form-control" placeholder="Digite sua senha" required="">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Lembrar
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" value="Entrar">Entrar</button>
+      </form>
 
-			</form>
-	</section>
+    </div>
 
 </body>
-
 </html>

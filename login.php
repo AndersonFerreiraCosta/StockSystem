@@ -1,24 +1,43 @@
-<style type="text/css">
-body {
-	background-color: #CCC;
-}
-</style>
 <?php
 
+if (!empty($_POST)) {
+	
+	// conexao com BD
+	include("conexao.php");
 
-$user = $_POST['user'];
-$pass = $_POST['pass'];
- include("bd.php");
-if($valida[$user]==$pass){
-setcookie("logado", "1");
- echo "<script>location.href='main.php'</script>";
- }
- else{
- echo "<font face=verdana size=2>";
- echo "Usu�rio ou senha incorretos!";
- echo "<br>";
- echo "<a href=index.html>";
- echo "Clique aqui</a> para tentar novamente.";
- echo "</a></font>";
- }
+	// receber variaveis do post
+	$usuario = $_POST["usuario"];
+	$senha = md5($_POST["senha"]);
+	
+	// verificar se existe usuario+senha procurado
+	$sql = "SELECT * FROM usuarios WHERE login='{$usuario}' AND senha='{$senha}';";
+	
+	$resultado = mysql_query($sql);
+ 	$validado = mysql_num_rows($resultado);
+	
+ 	// verificar resultado da validação
+ 	if ($validado == true) {
+ 		
+ 		// iniciar sessão
+ 		session_start();
+ 		
+ 		// puxar dados do resultado do BD
+ 		$dados = mysql_fetch_array($resultado);
+ 		
+ 		// grava na sessão
+ 		$_SESSION['cod_usuario'] = $dados['cod_usuario'];
+ 		$_SESSION['nome'] = $dados['nome'];
+ 		$_SESSION['login'] = $dados['login'];
+ 		
+ 		// redireciona pra listagem
+ 		header("Location: main.php");
+ 		
+ 	} else {
+ 		header("Location: index.html");
+ 	}
+	
+} else {
+	header("Location: index.html");
+}
+
 ?>

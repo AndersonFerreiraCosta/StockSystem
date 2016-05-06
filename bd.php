@@ -1,3 +1,0 @@
-<?php
-$valida[admin] = "admin";
-?>

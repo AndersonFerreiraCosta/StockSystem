@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="assets/img/logo.png">
+
+<!-- Bootstrap core CSS -->
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<link href="assets/css/ie10-viewport-bug-workaround.css"
+	rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href="assets/css/justified-nav.css" rel="stylesheet">
+
+<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<script src="assets/js/ie-emulation-modes-warning.js"></script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<title>Login no Sistema</title>
+</head>
+<body>
+
+<div class="container">
+
+      <form action="salvar.php" method="Post" class="form-signin">
+        <h2 class="form-signin-heading" align="center">Bem-Vindo</h2>
+        <label for="inputNome" class="sr-only">Nome</label>
+        <input type="text" name="nome" class="form-control" placeholder="Digite seu nome" required="" autofocus="">
+         
+         <label for="inputLogin" class="sr-only">Login</label>
+        <input type="text" name="usuario" class="form-control" placeholder="Digite seu login" required="" autofocus="">
+        
+        <label for="inputPassword" class="sr-only">Senha</label>
+        <input type="password" name="senha" class="form-control" placeholder="Digite sua senha" required="">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Lembrar
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" value="Entrar">Entrar</button>
+      </form>
+
+    </div>
+
+</body>
+</html>
