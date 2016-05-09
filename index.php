@@ -9,7 +9,7 @@
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="icon" href="assets/img/logo.png">
+
 
 <!-- Bootstrap core CSS -->
 <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -37,6 +37,7 @@
 
 <div class="container">
 
+
       <form action="login.php" method="Post" class="form-signin">
         <h2 class="form-signin-heading" align="center">Bem-Vindo</h2>
         <label for="inputLogin" class="sr-only">Login</label>
@@ -50,8 +51,11 @@
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit" value="Entrar">Entrar</button>
       </form>
+      
+     
 
     </div>
+    
 
 </body>
 </html>

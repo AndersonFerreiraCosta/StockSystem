@@ -2,21 +2,39 @@
 
 include ("conexao.php");
 
-// conexÃ£o ok e banco ok
-echo $_POST ['nome'] = $_POST ['nome'] ;
-echo $_POST ['usuario'] = $_POST ['usuario'] ;
-echo $_POST ['senha'] =   $_POST ['senha'] ;
-
-$sql = "INSERT INTO recados(nome,login,senha)
-						VALUES('{$_POST['nome']}',
-							   '{$_POST['usuario']}',
-							   '{$_POST['senha']};";
-
-if (! mysql_query ( $sql )) {
-	die ( "Erro ao gravar recado!" );
-} else {
-	
-	header ( "Location: index.html" );
-}
-
+$login = $_POST['login'];
+$senha = MD5($_POST['senha']);
+$connect = mysql_connect('localhost','root','');
+$db = mysql_select_db('stocksystem');
+$query_select = "SELECT login FROM usuarios WHERE login = '$login'";
+$select = mysql_query($query_select,$connect);
+$array = mysql_fetch_array($select);
+$logarray = $array['login'];
+ 
+    if($login == "" || $login == null){
+        echo"<script language='javascript' type='text/javascript'>alert('O campo login deve ser preenchido');window.location.href='cadastro.html';</script>";
+ 
+        }else{
+            if($logarray == $login){
+ 
+                echo"<script language='javascript' type='text/javascript'>alert('Esse login já existe');window.location.href='cadastro.html';</script>";
+                die();
+ 
+            }else{
+                $query = "INSERT INTO usuarios (login,senha) VALUES ('$login','$senha')";
+                $insert = mysql_query($query,$connect);
+                 
+                if($insert){
+                    echo"<script language='javascript' type='text/javascript'>alert('Usuário cadastrado com sucesso!');window.location.href='main.php'</script>";
+                }else{
+                    echo"<script language='javascript' type='text/javascript'>alert('Não foi possível cadastrar esse usuário');window.location.href='cadastrar.php'</script>";
+                }
+                
+            }
+        }
+        
+        
+        
 ?>
+
+

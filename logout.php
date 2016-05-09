@@ -6,6 +6,6 @@
 	unset($_SESSION);
 	
 	// redireciona
-	header("Location: index.html");
+	header("Location: index.php");
 
 ?>

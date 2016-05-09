@@ -5,7 +5,7 @@
 	
 	// verifica se o usuario esta autenticado
 	if (!isset($_SESSION['cod_usuario'])) {
-		header("Location: index.html");
+		header("Location: index.php");
 		die();
 	}
 
