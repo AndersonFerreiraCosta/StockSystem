@@ -1,5 +1,4 @@
 <?php
-include ("validador.php");
 
 
 if (isset ( $_GET ['url'] )) {
@@ -145,7 +144,7 @@ include 'application/controler/DB.php';
 								</ul></li>
 							<li class="dropdown"><a href="#" class="dropdown-toggle"
 								data-toggle="dropdown" role="button" aria-haspopup="true"
-								aria-expanded="false"> Relatórios <span class="caret"></span></a>
+								aria-expanded="false"> RelatÃ³rios <span class="caret"></span></a>
 								<ul class="dropdown-menu">
 									<li><a href="main.php?url=relatorio&acao=produto">Produtos</a></li>
 									<li><a href="main.php?url=relatorio&acao=fornecedor">Fornecedores</a></li>
@@ -160,7 +159,7 @@ include 'application/controler/DB.php';
 								data-toggle="dropdown" role="button" aria-haspopup="true"
 								aria-expanded="false"> Usuarios <span class="caret"></span></a>
 								<ul class="dropdown-menu">
-									<li><a href="cadastrar.php">Cadastrar</a></li>
+									<li><a href="cadastrar.html">Cadastrar</a></li>
 
 
 								</ul></li>
@@ -173,10 +172,28 @@ include 'application/controler/DB.php';
              </div>
 			</nav>
 	
-<p>&nbsp;</p>
 
 
-		<div id="Content"><?php include 'application/view/'.$url.'.phtml'; ?></div>
+      <form action="salvar.php" method="Post" class="form-signin">
+        <h2 class="form-signin-heading" align="center">Cadastro</h2>
+        <label for="inputNome" class="sr-only">Nome</label>
+        <input type="text" name="nome" class="form-control" placeholder="Digite seu nome" required="" autofocus="">
+         
+         <label for="inputLogin" class="sr-only">Login</label>
+        <input type="text" name="usuario" class="form-control" placeholder="Digite seu login" required="" autofocus="">
+        
+        <label for="inputPassword" class="sr-only">Senha</label>
+        <input type="password" name="senha" class="form-control" placeholder="Digite sua senha" required="">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Lembrar
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" value="Entrar">Entrar</button>
+      </form>
+
+   
+    
 	</div>
 
 </body>

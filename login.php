@@ -6,8 +6,8 @@ if (!empty($_POST)) {
 	include("conexao.php");
 
 	// receber variaveis do post
-	$usuario = $_POST["usuario"];
-	$senha = md5($_POST["senha"]);
+	 $usuario = $_POST["usuario"];
+	 $senha = md5($_POST["senha"]);
 	
 	// verificar se existe usuario+senha procurado
 	$sql = "SELECT * FROM usuarios WHERE login='{$usuario}' AND senha='{$senha}';";
