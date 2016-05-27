@@ -33,11 +33,11 @@ if (!empty($_POST)) {
  		header("Location: main.php");
  		
  	} else {
- 		header("Location: index.html");
+ 		header("Location: index.php");
  	}
 	
 } else {
-	header("Location: index.html");
+	header("Location: index.php");
 }
 
 ?>
